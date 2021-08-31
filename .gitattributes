@@ -1,2 +1,2 @@
 * linguist-vendored
-*.HTML linguist-detectable=Javascript
+*.HTML linguist-detectable=false
