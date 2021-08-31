@@ -1,2 +1,2 @@
 * linguist-vendored
-* .html linguist-detectable=HTML
+*.HTML linguist-detectable=HTML
