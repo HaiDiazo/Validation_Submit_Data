@@ -17,3 +17,50 @@ This is my script for make a validation submit data with javascript when empty i
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 ```
 - Second you make form input and button submit with tag form. 
+- Third, use this script in below for show alert. Variable 'a' for when you typing in appreance a form, alert doesn't show. But after you click a button sign up with empty form. You will get a alert then when you typing alert will hide and you typing to empty again alert will show.
+```js
+var a = 0;
+
+        $("#buttonSubmit").click(function() {
+
+            var name = $("#Name").val();
+            var email = $("#EmailAddress").val();
+            var password = $("#Password").val();
+
+            if (name == "") {
+                $("#alertName").show();
+            } else {
+                $("#alertName").hide();
+            }
+
+            if (email == "") {
+                $("#alertEmailAddress").show();
+            } else {
+                $("#alertEmailAddress").hide();
+            }
+
+            if (password == "") {
+                $("#alertPassword").show();
+            } else {
+                $("#alertPassword").hide();
+            }
+
+            a = 1;
+
+        });
+
+        function FilledData(id) {
+
+            if (a != 0) {
+                var data = document.getElementById(id).value;
+                var alert = "#alert";
+
+                if (data != "") {
+                    $(alert.concat(id)).hide();
+                } else {
+                    $(alert.concat(id)).show();
+                }
+            }
+        };
+```
+- Done.
